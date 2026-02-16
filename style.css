@@ -80,10 +80,14 @@ p {
 /* Cat */
 
 .cat {
-    width: 250px;
-    margin: 10px 0;
-    transition: width 0.4s ease;
+    position: absolute;
+    top: 32%; /* 🔽 desce um pouco */
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(140px, 38vw, 200px);
 }
+
+
 
 .letter-window.final .cat {
     width: 180px;
@@ -128,12 +132,26 @@ display: inline-block;
     cursor: default;
 }
 
-.final-text{
-    font-size: 22px;
-    line-height: 1.4;
+.final-text {
+    font-size: clamp(16px, 4.5vw, 22px);
     text-align: center;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgba(255,240,240,0.5);
-    border-radius: 12px;
+    max-width: 90%;
+    line-height: 1.4;
 }
+
+
+#letter-title {
+    font-size: clamp(22px, 6vw, 34px);
+    text-align: center;
+    max-width: 90%;
+    margin: 0;
+}
+
+
+.letter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
